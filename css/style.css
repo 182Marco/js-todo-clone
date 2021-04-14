@@ -158,6 +158,17 @@ main ul {
   width: 100%;
 }
 
+main .errwrap {
+  height: 50px;
+  text-align: left;
+  color: red;
+}
+
+main .errwrap .err {
+  line-height: 50px;
+  margin: 0;
+}
+
 input {
   margin-top: 2vh;
 }
@@ -172,7 +183,7 @@ ul {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-top: 12vh;
+  padding-top: 10vh;
 }
 
 ul li {
@@ -225,5 +236,9 @@ ul li i:hover {
 
 ::placeholder {
   color: #6cc7f8;
+}
+
+.err.no-show {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

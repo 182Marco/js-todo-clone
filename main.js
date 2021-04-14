@@ -3,6 +3,7 @@ $(document).ready(function () {
   var addItem = $(`#addItem`);
   var itemList = $(`.itemList`);
   var template = $(`#template li`);
+  var elemErr = $(`.err`);
 
   // PROPS
   var todos = [
@@ -34,12 +35,27 @@ $(document).ready(function () {
   addItem.focus();
   // inserimento nuova todo
   addItem.keyup((e) => {
-    if (e.which == 13) {
+    if (e.which == 13 && !addItem.val() == ``) {
       var templateC = template.clone();
       templateC.find(`span`).text(addItem.val().trim().toLowerCase());
       itemList.append(templateC);
+      addItem.val(``);
+    } else if (e.which == 13 && addItem.val() == ``) {
+      elemErr.removeClass(`no-show`);
+    } else if (
+      e.which != 32 &&
+      e.which != 37 &&
+      e.which != 39 &&
+      e.which != 8 &&
+      !elemErr.hasClass(`no-show`)
+    ) {
+      elemErr.addClass(`no-show`);
     }
   });
+
+  // $(`body`).on(`click`, `.itemList li`, ()=>{
+
+  // });
 
   // ho provato con una sintassi similar vue ma non scrive i testi
   // for (todo in todos) {

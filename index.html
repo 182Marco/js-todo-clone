@@ -27,13 +27,18 @@
       <main>
         <section>
           <h1>Todo list</h1>
-          <input 
-          placeholder="Inserisci un promemoria e premi invio"
-          id="addItem" type="text" />
+          <input
+            placeholder="Inserisci un promemoria e premi invio"
+            id="addItem"
+            type="text"
+          />
+          <div class="errwrap">
+            <p class="err no-show">Devi prima inserire un testo!</p>
+          </div>
         </section>
         <ul class="itemList"></ul>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <!-- template nascosto da copiare -->
     <div id="template" style="display: none">

@@ -24,6 +24,15 @@ main {
   ul {
     width: 100%;
   }
+  .errwrap {
+    height: 50px;
+    text-align: left;
+    color: red;
+    .err {
+      line-height: 50px;
+      margin: 0;
+    }
+  }
 }
 input {
   margin-top: 2vh;
@@ -35,7 +44,7 @@ input {
 }
 ul {
   flex-grow: 1;
-  padding-top: 12vh;
+  padding-top: 10vh;
   li {
     @include flex(row, space-between, center);
     padding: 1.5vh 0;
