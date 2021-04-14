@@ -12,7 +12,7 @@ $(document).ready(function () {
       done: false,
     },
     {
-      text: `Ammazzare a Frenky Culo di Gomma`,
+      text: `Ammazzare a Frenky Culo Di Gomma`,
       done: false,
     },
     {
@@ -27,6 +27,9 @@ $(document).ready(function () {
     var templateC = template.clone();
     // passargli le props
     templateC.children(`span`).text(todos[i].text);
+    if (!todos[i].done) {
+      templateC.children(`span`).toggleClass(`done`);
+    }
     // iniettarlo nella lista
     itemList.append(templateC);
   }
@@ -53,10 +56,6 @@ $(document).ready(function () {
     }
   });
 
-  // $(`body`).on(`click`, `.itemList li`, ()=>{
-
-  // });
-
   // ho provato con una sintassi similar vue ma non scrive i testi
   // for (todo in todos) {
   //   // colonare il template
@@ -71,6 +70,7 @@ $(document).ready(function () {
     $(this).parent().remove();
   });
   // chiusura document ready
+  $(`body`).on(`click`, `.itemList li span`, function () {
+    $(this).toggleClass(`done`);
+  });
 });
-
-// FUNZIONI UTILITY

@@ -4,9 +4,6 @@
 @import 'reset.scss';
 @import 'typography.scss';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-* {
-  font-family: 'Raleway', sans-serif;
-}
 
 body {
   background-color: $darkBg;
@@ -21,7 +18,7 @@ main {
   text-align: center;
   @include flex(column, space-between, center);
   section,
-  ul {
+  .itemList {
     width: 100%;
   }
   .errwrap {
@@ -42,9 +39,11 @@ input {
   width: 100%;
   font-size: calc(1rem + 1vw);
 }
-ul {
+.itemList {
+  width: 100%;
   flex-grow: 1;
   padding-top: 10vh;
+  overflow: auto;
   li {
     @include flex(row, space-between, center);
     padding: 1.5vh 0;
