@@ -28,7 +28,7 @@ $(document).ready(function () {
     // passargli le props
     templateC.children(`span`).text(todos[i].text);
     if (todos[i].done) {
-      templateC.children(`span`).toggleClass(`done`);
+      templateC.children(`span`).addClass(`done`);
     }
     // iniettarlo nella lista
     itemList.append(templateC);
