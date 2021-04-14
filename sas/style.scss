@@ -1,0 +1,48 @@
+@import 'variabiles.scss';
+@import 'mixin.scss';
+@import 'utility.scss';
+@import 'reset.scss';
+@import 'typography.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: $darkBg;
+  color: $semiLightTxt;
+  height: 100vh;
+  @include flex();
+  background-color: #282b35;
+  color: $semiLightTxt;
+}
+main {
+  @include width-height(70vw, 85vh);
+  text-align: center;
+  @include flex(column, space-between, center);
+  section,
+  ul {
+    width: 100%;
+  }
+}
+input {
+  margin-top: 2vh;
+}
+#addItem {
+  color: $brand;
+  width: 100%;
+  font-size: calc(1rem + 1vw);
+}
+ul {
+  flex-grow: 1;
+  padding-top: 12vh;
+  li {
+    @include flex(row, space-between, center);
+    padding: 1.5vh 0;
+    font-size: calc(0.7rem + 1vw);
+    border-bottom: 1px solid $semiLightTxt;
+  }
+}
+
+// classi aggiunte da js
+@import '_jsClasses.scss';

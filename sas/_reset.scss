@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+input {
+  @include input($brand);
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+ul {
+  list-style: none;
+}
+
+.btn {
+  @include btn();
+}
+
+a {
+  @include a();
+}
