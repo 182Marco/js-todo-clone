@@ -34,15 +34,15 @@
 
 input {
   border: 0;
-  border-bottom: 1px solid #198dcc;
+  border-bottom: 1px solid #6cc7f8;
   background-color: transparent;
 }
 
 input:focus {
   outline: none;
   border: 1px solid transparent;
-  -webkit-box-shadow: 0 4px 2px -2px #198dcc;
-          box-shadow: 0 4px 2px -2px #198dcc;
+  -webkit-box-shadow: 0 4px 2px -2px #6cc7f8;
+          box-shadow: 0 4px 2px -2px #6cc7f8;
 }
 
 ul,
@@ -62,8 +62,8 @@ ul {
   margin: 1vw;
   font-weight: bold;
   background: transparent;
-  border: 1px solid #198dcc;
-  color: #198dcc;
+  border: 1px solid #6cc7f8;
+  color: #6cc7f8;
   border-radius: 7px;
   text-decoration: none;
   cursor: pointer;
@@ -72,7 +72,7 @@ ul {
 }
 
 .btn:hover {
-  background: #198dcc;
+  background: #6cc7f8;
   color: #fff;
 }
 
@@ -81,7 +81,7 @@ ul {
 }
 
 a {
-  color: #198dcc;
+  color: #6cc7f8;
   text-decoration: none;
 }
 
@@ -163,7 +163,7 @@ input {
 }
 
 #addItem {
-  color: #198dcc;
+  color: #6cc7f8;
   width: 100%;
   font-size: calc(1rem + 1vw);
 }
@@ -192,5 +192,38 @@ ul li {
   padding: 1.5vh 0;
   font-size: calc(0.7rem + 1vw);
   border-bottom: 1px solid #ccc;
+}
+
+ul li span {
+  cursor: pointer;
+}
+
+ul li span:hover {
+  color: #fff;
+}
+
+ul li i {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+ul li i:hover {
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #6cc7f8;
+}
+
+:-ms-input-placeholder {
+  color: #6cc7f8;
+}
+
+::-ms-input-placeholder {
+  color: #6cc7f8;
+}
+
+::placeholder {
+  color: #6cc7f8;
 }
 /*# sourceMappingURL=style.css.map */

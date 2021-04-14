@@ -41,8 +41,23 @@ ul {
     padding: 1.5vh 0;
     font-size: calc(0.7rem + 1vw);
     border-bottom: 1px solid $semiLightTxt;
+    span {
+      cursor: pointer;
+      &:hover {
+        color: $pureW;
+      }
+    }
+    i {
+      color: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      &:hover {
+        color: $pureW;
+      }
+    }
   }
 }
-
+::placeholder {
+  color: $brand;
+}
 // classi aggiunte da js
 @import '_jsClasses.scss';
