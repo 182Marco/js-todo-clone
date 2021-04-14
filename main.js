@@ -16,7 +16,7 @@ $(document).ready(function () {
       done: false,
     },
     {
-      text: `Cercare la capitale della birmania`,
+      text: `Cercare la capitale della Birmania`,
       done: true,
     },
   ];
@@ -67,7 +67,9 @@ $(document).ready(function () {
   //   itemList.append(templateC);
   // }
 
-  // EVENTI
+  $(`body`).on(`click`, `.itemList li i`, function () {
+    $(this).parent().remove();
+  });
   // chiusura document ready
 });
 
