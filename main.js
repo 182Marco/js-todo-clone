@@ -27,7 +27,7 @@ $(document).ready(function () {
     var templateC = template.clone();
     // passargli le props
     templateC.children(`span`).text(todos[i].text);
-    if (!todos[i].done) {
+    if (todos[i].done) {
       templateC.children(`span`).toggleClass(`done`);
     }
     // iniettarlo nella lista
